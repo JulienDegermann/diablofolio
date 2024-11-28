@@ -1,0 +1,86 @@
+#set {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  #items {
+    background-color: red;
+    display: grid;
+    width: max-content;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(10, 50px);
+    grid-template-areas:
+      " . . . head head . . . "
+      ". shoulders shoulders head head neck . ."
+      ". shoulders shoulders chest chest . . ."
+      " hands hands . chest chest . arms arms"
+      " hands hands .  chest chest . arms arms"
+      " hands hands .  belt belt . arms arms"
+      " . . leftRing  legs legs rightRing . ."
+      " leftHand leftHand . legs legs .  rightHand rightHand"
+      " leftHand leftHand . feets feets .  rightHand rightHand"
+      " leftHand leftHand . feets feets .  rightHand rightHand";
+    gap: 1rem;
+
+    #head {
+      grid-area: head;
+    }
+    #shoulders {
+      grid-area: shoulders;
+    }
+    #neck {
+      grid-area: neck;
+    }
+    #chest {
+      grid-area: chest;
+    }
+    #hands {
+      grid-area: hands;
+    }
+
+    #arms {
+      grid-area: arms;
+    }
+
+    #leftRing {
+      grid-area: leftRing;
+    }
+
+    #rightRing {
+      grid-area: rightRing;
+    }
+
+    #legs {
+      grid-area: legs;
+    }
+
+    #leftHand {
+      grid-area: leftHand;
+    }
+
+    #rightHand {
+      grid-area: rightHand;
+    }
+
+    #feets {
+      grid-area: feets;
+    }
+
+    #belt {
+      grid-area: belt;
+    }
+  }
+  #informations {
+    width: 50%;
+    width: max-available;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding: 1rem;
+
+    .flex {
+      height: auto;
+    }
+  }
+}

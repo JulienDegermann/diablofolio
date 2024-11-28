@@ -1,5 +1,7 @@
-import EquipmentInterface from "../../Interfaces/EquipmentInterface";
-import { sets } from "../../core/datas";
+
+
+import { sets } from "../../../core/datas";
+import EquipmentInterface from "../../../Interfaces/EquipmentInterface";
 import "./style.css";
 // import DefaultImage from "/public/images/hero.webp";
 
@@ -9,7 +11,6 @@ export default function EquipmentItem({
   equipment: EquipmentInterface;
 }) {
   const set = sets.find((set) => set.name === equipment.setName);
-  console.log(set);
   return (
     <div id={equipment.place} className={`${equipment.type} setItem`}>
       {/* <img src="./images/hero.jpeg" alt="image de l'équipement" /> */}

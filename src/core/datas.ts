@@ -1,4 +1,5 @@
 import EquipmentInterface from "../Interfaces/EquipmentInterface";
+import ProjectInterface from "../Interfaces/ProjectInterface";
 
 
 export enum EquipmentType {
@@ -28,6 +29,52 @@ export enum SetName {
     biker = "le cycliste de Brocéliande"
 }
 
+export enum HardSkills {
+    Symfony = "Symfony",
+    React = "React",
+    ApiPlatform = "Api Platform",
+    Docker = "Docker",
+    Bootstrap = "Bootstrap",
+    Wordpress = "Wordpress",
+    CleanArchitecture = "Clean Architecture",
+    TypeScript = "TypeScript",
+    JavaScript = "JavaScript",
+    Git = "Git",
+    GitHub = "GitHub",
+    GitFlow = "GitFlow",
+    Slack = "Slack",
+    Teams = "Teams",
+    Meet = "Meet",
+    Discord = "Discord",
+    Français = "Français",
+    Anglais = "Anglais",
+    Php = "Php",
+};
+
+export enum SoftSkills {
+    TeamWork = "Esprit d'équipe",
+    Detailing = "Sens du détail",
+    Innovation = "Innovation",
+    Curious = "Curiosité",
+}
+
+export const skills = {
+    HardSkills: [
+        HardSkills.Symfony,
+        HardSkills.React,
+        HardSkills.Php,
+        HardSkills.TypeScript,
+        HardSkills.GitHub,
+        HardSkills.Docker,
+    ]
+    ,
+    SoftSkills: [
+        "Esprit d'équipe",
+        "Sens du détail",
+        "Innovation",
+        "Curiosité",
+    ]
+};
 
 export const sets = [
     {
@@ -150,39 +197,27 @@ export const equipments: EquipmentInterface[] = [
 
 ];
 
-
-export const skills = {
-    hardskills: [
-        ["php", "Symfony"],
-        ["JavaScript", "TypeScript", "React"],
-        ["Git", "GitHub", "GitFlow"],
-        ["Docker", "clean architecture"],
-        ["Slack", "Teams", "Meet", "Discord"],
-        ["Français", "Anglais"]
-    ],
-    softskills: [
-        "Esprit d'équipe",
-        "Sens du détail",
-        "Innovation",
-        "Curiosité", // to change
-    ]
-}
-
-export const experiences = [
+export const experiences: ProjectInterface[] = [
     {
-        title: "Basaalt",
-        stack: ["Symfony", "React", "Api Platform"],
-        image: "basaalt.webp"
+        name: "Basaalt",
+        stacks: [HardSkills.Symfony, HardSkills.React, HardSkills.ApiPlatform],
+        image: "basaalt.webp",
+        description: "Site de vente en ligne pour un groupe de musique local.",
+        link: "monlien"
     },
     {
-        title: "Blabla Vélo",
-        stack: ["Symfony", "Docker", "Bootstrap"],
-        image: "blablavelo.webp"
+        name: "Blabla Vélo",
+        stacks: [HardSkills.Symfony, HardSkills.Docker, HardSkills.Bootstrap],
+        image: "blablavelo.webp",
+        description: "Plateforme de partage de trajets à vélo.",
+        link: "monlien"
     },
     {
-        title: "A l'Encre Bleue",
-        stack: ["Wordpress"],
-        image: "alencrebleue.webp"
+        name: "A l'Encre Bleue",
+        stacks: [HardSkills.Wordpress],
+        image: "aeb.webp",
+        description: "Refonte du site Wordpress d'un client de l'agence. Création de 2 plugins.",
+        link: "https://alencrebleue.com/"
     },
 
 ]

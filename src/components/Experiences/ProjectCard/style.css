@@ -1,0 +1,75 @@
+#experiences .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.projectCard {
+  height: 300px;
+  border: 1px solid var(--LIGHT);
+  flex: 1;
+  margin: 0 1rem;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
+
+  .description {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    z-index: 100;
+    width: 100%;
+    background: var(--LIGHT);
+    min-width: 300px;
+    max-width: 400px;
+    padding: 1rem;
+    border: 1px solid var(--DARK);
+    color: var(--DARK);
+    transform: translateY(-50%);
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .projectTitle {
+      align-self: center;
+    }
+
+    .projectDescription {
+      margin-top: 1rem;
+    }
+    .projectStack {
+      font-style: italic;
+      font-size: 0.8em;
+      width: 100%;
+    }
+  }
+
+
+  .description,
+  .description * {
+    visibility: hidden;
+    transition: visibility 0s 0.1s;
+  }
+
+  &:hover :is(.description, .description *) {
+    visibility: visible;
+    transition: visibility 0s 0s;
+  }
+}
