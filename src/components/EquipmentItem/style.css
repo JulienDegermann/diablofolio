@@ -1,0 +1,77 @@
+.setItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  padding: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  box-shadow: -2px 5px 20px 5px var(--DARK) inset;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+  }
+
+
+  img {
+    width: 160%;
+    height: 160%;
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 10;
+  }
+
+  .description {
+    color: var(--LIGHT);
+    padding: 1rem;
+    border: 1px solid var(--DARK);
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(0%, -50%);
+    margin-left: 0.5rem;
+    z-index: 100;
+    width: max-content;
+    max-width: 400px;
+  }
+
+  .description,
+  .description * {
+    visibility: hidden;
+    transition: visibility 0s !important;
+  }
+
+  .equipmentName {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  &:hover {
+    .description,
+    .description * {
+      visibility: visible;
+      transition: visibility 0s !important;
+    }
+  }
+}
+.set,
+.set .description {
+  background: var(--SET);
+  border-color: var(--SET_BORDER);
+}
+.legendary,
+.legendary .description {
+  background: var(--LEGENDARY);
+  border-color: var(--LEGENDARY_BORDER);
+}

@@ -1,0 +1,11 @@
+.sectionTitle {
+  border: 1px solid red;
+
+}
+section {
+  height: 100%;
+  max-height: 800px;
+}
+.container {
+  height: 100%;
+}
