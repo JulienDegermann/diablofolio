@@ -69,10 +69,22 @@ export const skills = {
     ]
     ,
     SoftSkills: [
-        "Esprit d'équipe",
-        "Sens du détail",
-        "Innovation",
-        "Curiosité",
+        {
+            name: "Esprit d'équipe",
+            image: "team.svg"
+        },
+        {
+            name: "Sens du détail",
+            image: "search.svg"
+        },
+        {
+            name: "Innovation",
+            image: "light.svg"
+        },
+        {
+            name: "Curiosité",
+            image: "book.svg"
+        },
     ]
 };
 

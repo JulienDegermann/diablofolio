@@ -3,11 +3,15 @@
   --DARK: #181710;
   --LIGHT: #ffffff;
 
-  --LEGENDARY: linear-gradient(45deg, #8F5421, #5A300C);
-  --LEGENDARY_BORDER: #D3721C;
+  --SKILL: radial-gradient(var(--YELLOW) 40%, var(--DARK) 60%);
+  --SKILL_HOVER: radial-gradient(var(--YELLOW) 0%, var(--DARK) 100%);
 
-  --SET: linear-gradient(45deg, #47721C, #29440D);
-  --SET_BORDER: #72BE27;
+
+  --LEGENDARY: linear-gradient(45deg, #8f5421, #5a300c);
+  --LEGENDARY_BORDER: #d3721c;
+
+  --SET: linear-gradient(45deg, #47721c, #29440d);
+  --SET_BORDER: #72be27;
 }
 
 * {
@@ -29,23 +33,25 @@ body {
 #root {
   width: 100%;
   height: 100%;
-  background-color: var(--DARK);
+  background: var(--DARK);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex {
-  display: flex;
-  height: 100%;
-  width: 100%;
+@media screen and (min-width: 768px) {
+  .flex {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .flex :is(#image, #set) {
   margin: 2rem;
-  border: 1px solid #000;
 }
 
-
-
-
+#informations {
+  /* width: 30%; */
+  flex: 1;
+}

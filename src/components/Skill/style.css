@@ -1,22 +1,11 @@
 #hardSkills,
 #softSkills {
   align-items: center;
-  justify-content: space-evenly;
-  background-color: var(--YELLOW);
-  color: var(--DARK);
   padding: 1rem;
   border-radius: 1rem;
   margin: 1rem 0;
 
   > div {
-    border: 1px solid var(--DARK);
-    flex: 1;
-    height: 10%;
-    aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem;
-    text-align: center;
+    max-width: 100px;
   }
 }

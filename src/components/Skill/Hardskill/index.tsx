@@ -1,4 +1,5 @@
-import { HardSkills } from '../../core/datas';
+
+import { HardSkills } from '../../../core/datas';
 import './style.css';
 
 export default function Hardskill({
@@ -8,7 +9,7 @@ export default function Hardskill({
 }) {
   return (
     <div className={"hardSkill"}>
-      <img src={`public/images/basaalt.webp`} alt={hardskill} />
+      <img src={`public/icons/${hardskill}.svg`} alt={hardskill} />
       <h3 className="skillName">{hardskill}</h3>
     </div>
   );

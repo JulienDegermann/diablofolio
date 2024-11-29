@@ -1,11 +1,9 @@
 import "./App.css";
 import Equipment from "./components/Equipment";
 import Expriences from "./components/Experiences";
-import Hardskill from "./components/Hardskill";
-import Image from "./components/Image";
 import Section from "./components/Section";
 import Skills from "./components/Skill";
-import { skills, experiences } from "./core/datas";
+import { experiences } from "./core/datas";
 
 function App() {
   console.log(experiences);
@@ -14,7 +12,7 @@ function App() {
     <>
       <Section title="Julien Degermann : Fullstack Developer">
         <div className="flex">
-          <Image />
+          {/* <Image /> */}
           <Equipment />
 
           <div id="informations">

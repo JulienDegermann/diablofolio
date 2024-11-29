@@ -2,9 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 75%;
+  /* width: 40%; */
+  flex: 1;
+
   #items {
-    background-color: red;
     display: grid;
     width: max-content;
     grid-template-columns: repeat(8, 50px);

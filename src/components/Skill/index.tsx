@@ -1,5 +1,6 @@
 import { skills } from "../../core/datas";
 import Hardskill from "./Hardskill";
+import Softskill from "./Softskill";
 import "./style.css";
 
 export default function Skills() {
@@ -12,10 +13,8 @@ export default function Skills() {
         ))}
       </div>
       <div className="flex" id={"softSkills"}>
-        {skills.SoftSkills.map((softskills, index) => (
-          <div key={index} className={"softSkills"}>
-            <h3>{softskills}</h3>
-          </div>
+        {skills.SoftSkills.map((softskill, index) => (
+          <Softskill key={index} softskill={softskill} />
         ))}
       </div>
     </div>
